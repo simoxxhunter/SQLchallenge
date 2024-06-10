@@ -27,3 +27,26 @@ select Count (Invités) as alias from Invités;
 
 select Count (Invités) as alias from Invités where statut = 'Suspect';
 
+
+
+
+
+
+
+
+
+CREATE TABLE Mouvements (
+id_mouvement Serial primary key,
+id_invite integer,
+id_room Serial ,
+time integer,
+FOREIGN KEY (id_invite) REFERENCES Invités(id_invite)
+);
+
+INSERT INTO Mouvements (id_mouvement, id_invite, id_room, time) VALUES (1, 1, 1, 20);
+INSERT INTO Mouvements (id_mouvement, id_invite, id_room, time) VALUES (2, 2, 2, 20);
+INSERT INTO Mouvements (id_mouvement, id_invite, id_room, time) VALUES (3, 3, 1, 21);
+INSERT INTO Mouvements (id_mouvement, id_invite, id_room, time) VALUES (4, 4, 3, 21);
+INSERT INTO Mouvements (id_mouvement, id_invite, id_room, time) VALUES (5, 5, 2, 22);
+
+
