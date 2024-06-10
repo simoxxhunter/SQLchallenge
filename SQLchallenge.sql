@@ -20,3 +20,6 @@ INSERT INTO Invités (id_invite, nom, statut) VALUES (5,
 'Suspect');
 
 select * from Invités;
+
+select Invités.nom, Invités.statut from Invités;
+
