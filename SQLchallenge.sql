@@ -23,3 +23,4 @@ select * from Invités;
 
 select Invités.nom, Invités.statut from Invités;
 
+select Count (Invités) as alias from Invités;
